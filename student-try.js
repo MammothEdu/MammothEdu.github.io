@@ -23,7 +23,7 @@ return data.choices[0].text;
 }
 
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener('click', async () => {
   const topic = document.getElementById('topic').value;
   const subject = document.getElementById('subject').value;
   const grade = document.getElementById('grade').value;
