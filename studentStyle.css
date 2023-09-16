@@ -1,48 +1,40 @@
-/* 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+:root {
+  --primary: #3b99fc;
+  --secondary: #56ccf2;
 }
-#header {
-    background-color: white;
-    border-bottom: 1px solid gray;
-    text-align: center;
-    padding: 20px 0;
+
+fieldset {
+  border: none;
+  padding: 0;
 }
-#header h1 {
-    font-weight: bold;
-    margin: 0;
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;  
 }
-#container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #e0e0e0;
-    border: 1px solid gray;
-    border-radius: 5px;
+
+select {
+  appearance: none;
+  /* hide default arrow */
 }
-.box {
-    background-color: #e0e0e0;
-    border: 1px solid gray;
-    padding: 10px;
-    transition: background-color 0.3s;
-    text-align: center;
-    flex: 1;
-    margin: 0 10px;
+
+/* Custom arrow */
+select::after {
+  content: '\25BC';
+  position: absolute;  
+  /* ...styles */
 }
-.box:hover {
-    background-color: #c0c0c0;
+
+input[type="text"]:hover,
+select:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-#output {
-    background-color: #e0e0e0;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
+
+input[type="submit"] {
+  transition: transform 0.2s; 
 }
-input[type="text"],
-select,
-button {
-    margin-top: 10px;
-} */
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}

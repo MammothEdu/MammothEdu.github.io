@@ -1,119 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<style>
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+label {
+  display: block;
+  margin-bottom: 10px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+input[type="text"], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
 
-        .submit-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .submit-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Gray box for displaying user input */
-        .output-box {
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-    </style>
+</style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Beautiful Form</h2>
-        <form action="#" method="POST" id="myForm">
-            <div class="form-group">
-                <label for="words">Type in the words:</label>
-                <input type="text" id="words" name="words" placeholder="Enter words">
-            </div>
-            <div class="form-group">
-                <label for="dropdown1">Dropdown 1:</label>
-                <select id="dropdown1" name="dropdown1">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="dropdown2">Dropdown 2:</label>
-                <select id="dropdown2" name="dropdown2">
-                    <option value="optionA">Option A</option>
-                    <option value="optionB">Option B</option>
-                    <option value="optionC">Option C</option>
-                </select>
-            </div>
-            <button type="button" class="submit-button" onclick="typeOutInput()">Submit</button>
-        </form>
-    </div>
-    
-    <!-- Gray box to display user input -->
-    <div class="output-box" id="outputBox"></div>
 
-    <script>
-        function typeOutInput() {
-            const wordsInput = document.getElementById('words').value;
-            const dropdown1Input = document.getElementById('dropdown1').value;
-            const dropdown2Input = document.getElementById('dropdown2').value;
-            const outputBox = document.getElementById('outputBox');
-            
-            const text = `Words: ${wordsInput}\nDropdown 1: ${dropdown1Input}\nDropdown 2: ${dropdown2Input}`;
-            
-            outputBox.innerHTML = ''; // Clear the output box
-            
-            let i = 0;
-            const typeInterval = setInterval(() => {
-                if (i < text.length) {
-                    outputBox.innerText += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(typeInterval);
-                }
-            }, 50); // Adjust the interval for typing speed
-        }
-    </script>
+<form>
+  <label for="textinput">Text Input:</label>
+  <input type="text" id="textinput" name="textinput">
+
+  <label for="dropdown1">Dropdown 1:</label>
+  <select id="dropdown1" name="dropdown1">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <label for="dropdown2">Dropdown 2:</label>  
+  <select id="dropdown2" name="dropdown2">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>
