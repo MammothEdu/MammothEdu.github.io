@@ -3,6 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: white;
+            border-bottom: 1px solid gray;
+            text-align: center;
+            padding: 20px 0;
+        }
+        #header h1 {
+            font-weight: bold;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .box {
+            background-color: #e0e0e0;
+            border: 1px solid gray;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        .box:hover {
+            background-color: #c0c0c0;
+        }
+        #output {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>MAMU</h1>
+    </div>
+    <div id="container">
+        <div class="box">
+            BLAHH
+        </div>
+        <div class="box">
+            BLAHH
+        </div>
+        <div class="box">
+            <input type="text" placeholder="Enter text">
+            <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <!-- Add more options here -->
+            </select>
+            <button>Submit</button>
+        </div>
+        <div class="box">
+            <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <!-- Add more options here -->
+            </select>
+            <button>Submit</button>
+        </div>
+    </div>
+    <div id="output">
+        <!-- Output content will appear here -->
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student</title>
     <style>
         body {
@@ -82,4 +165,4 @@
         </form>
     </div>
 </body>
-</html>
+</html> -->
