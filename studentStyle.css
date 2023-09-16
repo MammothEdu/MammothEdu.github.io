@@ -1,42 +1,40 @@
-body {
-  font-family: 'Lato', sans-serif;
+:root {
+  --primary: #3b99fc;
+  --secondary: #56ccf2;
 }
 
-form {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+fieldset {
+  border: none;
+  padding: 0;
 }
 
-label {
-  font-weight: 600; 
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;  
 }
 
-input[type="text"], 
 select {
-  padding: 15px;
-  border-radius: 5px;
-  transition: border 0.3s;
+  appearance: none;
+  /* hide default arrow */
 }
 
-input[type="text"]:focus,
-select:focus {
-  border: 1px solid #3b99fc;
-  outline: none;
+/* Custom arrow */
+select::after {
+  content: '\25BC';
+  position: absolute;  
+  /* ...styles */
+}
+
+input[type="text"]:hover,
+select:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 input[type="submit"] {
-  background: linear-gradient(to right, #56ccf2, #2f80ed);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 0.2s; 
 }
 
 input[type="submit"]:hover {
-  background: linear-gradient(to right, #2f80ed, #56ccf2);
+  transform: scale(1.05);
 }
