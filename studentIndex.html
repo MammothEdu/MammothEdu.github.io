@@ -1,7 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Example</title>
     <title>Beautiful Form</title>
     <style>
         body {
@@ -12,11 +13,9 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-        }       
         }
 
         .form-container {
-            text-align: center;
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
@@ -26,8 +25,6 @@
         .form-group {
             margin-bottom: 20px;
         }
-        select, input, button {
-            margin: 5px;
 
         label {
             display: block;
@@ -55,23 +52,20 @@
         .submit-button:hover {
             background-color: #0056b3;
         }
+
+        /* Gray box for displaying user input */
+        .output-box {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <form>
-            <input type="text" placeholder="Enter text">
-            <select>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-            </select>
-            <select>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
-            </select>
-            <button type="submit">Submit</button>
         <h2>Beautiful Form</h2>
-        <form action="#" method="POST">
+        <form action="#" method="POST" id="myForm">
             <div class="form-group">
                 <label for="words">Type in the words:</label>
                 <input type="text" id="words" name="words" placeholder="Enter words">
@@ -92,9 +86,34 @@
                     <option value="optionC">Option C</option>
                 </select>
             </div>
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" class="submit-button" onclick="typeOutInput()">Submit</button>
         </form>
     </div>
+    
+    <!-- Gray box to display user input -->
+    <div class="output-box" id="outputBox"></div>
+
+    <script>
+        function typeOutInput() {
+            const wordsInput = document.getElementById('words').value;
+            const dropdown1Input = document.getElementById('dropdown1').value;
+            const dropdown2Input = document.getElementById('dropdown2').value;
+            const outputBox = document.getElementById('outputBox');
+            
+            const text = `Words: ${wordsInput}\nDropdown 1: ${dropdown1Input}\nDropdown 2: ${dropdown2Input}`;
+            
+            outputBox.innerHTML = ''; // Clear the output box
+            
+            let i = 0;
+            const typeInterval = setInterval(() => {
+                if (i < text.length) {
+                    outputBox.innerText += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typeInterval);
+                }
+            }, 50); // Adjust the interval for typing speed
+        }
+    </script>
 </body>
 </html>
-

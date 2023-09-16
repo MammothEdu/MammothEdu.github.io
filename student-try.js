@@ -7,18 +7,22 @@ submitBtn.addEventListener('click', () => {
   const subject = document.getElementById('subject').value;
   const grade = document.getElementById('grade').value;
   
-  output.textContent = `Explain ${topic} to a ${grade} student; the subject is ${subject}`;
+  const str = `Explain ${topic} to a ${grade} student; the subject is ${subject}`;
+  output.textContent = str;
   
   const response = await fetch('https://api.openai.com/v1/completions',{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${OPENAI_API_KEY}'
+      'Authorization': `Bearer ${OPENAI_API_KEY}`
     },
     body: JSON.stringify({
-      prompt,
-      max_tokens:100,
-      temperature:0.5
+      model: 'gpt-3.5-turbo',
+      messages: [{
+        role: 'user',
+        content: str
+      }]
+
     })
   });
   const data = await response.json();
