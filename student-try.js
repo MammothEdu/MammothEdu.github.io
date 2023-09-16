@@ -1,6 +1,6 @@
 const submitBtn = document.getElementById('submit');
 const output = document.getElementById('output');
-const OPENAI_API_KEY= "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";
+const OPENAI_API_KEY=process.env.OPENAI_API_KEY;
 
 async function APIcall(prompt){
   const response = await fetch('https://api.openai.com/v1/completions',{
