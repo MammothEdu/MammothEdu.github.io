@@ -4,63 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautiful Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        .submit-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .submit-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Gray box for displaying user input */
-        .output-box {
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="form-container">
@@ -93,27 +37,6 @@
     <!-- Gray box to display user input -->
     <div class="output-box" id="outputBox"></div>
 
-    <script>
-        function typeOutInput() {
-            const wordsInput = document.getElementById('words').value;
-            const dropdown1Input = document.getElementById('dropdown1').value;
-            const dropdown2Input = document.getElementById('dropdown2').value;
-            const outputBox = document.getElementById('outputBox');
-            
-            const text = `Words: ${wordsInput}\nDropdown 1: ${dropdown1Input}\nDropdown 2: ${dropdown2Input}`;
-            
-            outputBox.innerHTML = ''; // Clear the output box
-            
-            let i = 0;
-            const typeInterval = setInterval(() => {
-                if (i < text.length) {
-                    outputBox.innerText += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(typeInterval);
-                }
-            }, 50); // Adjust the interval for typing speed
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
