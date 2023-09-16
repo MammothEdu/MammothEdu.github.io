@@ -1,6 +1,7 @@
+
 body {
 	font-family: "Open Sans", sans-serif;
-	color: #444444;
+	color: #fff;
   }
   
   a {
@@ -24,66 +25,16 @@ body {
 
 body {
 	font-family: "Open Sans", sans-serif;
-	color: #444444;
-  }
-  
-  a {
-	color: #47b2e4;
-	text-decoration: none;
-  }
-  
-  a:hover {
-	color: #73c5eb;
-	text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-	font-family: "Jost", sans-serif;
-  }
-
-body {
-	font-family: "Open Sans", sans-serif;
-	color: #444444;
+	color: #fff;
 	overflow: hidden;
 
   }
-  
-  a {
-	color: #47b2e4;
-	text-decoration: none;
-  }
-  
-  a:hover {
-	color: #73c5eb;
-	text-decoration: none;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-	font-family: "Jost", sans-serif;
-  }
-
-input {
-	height: 32px;
-	border: 1px solid #ccc;
-	padding: 0 8px;
-	border-radius: 6px;
-	margin-bottom: 16px;
-	width: calc(50% - 152px);
-}
 
 .btn-container {
+	margin-top: 20px;
 	display: flex;
-	
+
+	justify-content: center;
   }
 
 .title-header {
@@ -95,6 +46,7 @@ input {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
   }
 
 
@@ -130,6 +82,7 @@ input {
 	font-size: 48px;
 	font-weight: 700;
 	line-height: 56px;
+  }
 
 .btn-container {
 	display: flex;
@@ -146,7 +99,7 @@ input {
 	transition: 0.5s;
 	margin: 10px 0 0 0;
 	color: #fff;
-	background: #47b2e4;
+	border: 3px solid white;
 	width: 100px;
 	height: 80px;
 	text-align: center;
