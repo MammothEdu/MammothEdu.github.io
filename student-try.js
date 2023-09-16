@@ -30,7 +30,7 @@ submitBtn.addEventListener('click', () => {
   
   const str = `Explain ${topic} to a ${grade} student; the subject is ${subject}`;
   
-  const aiResponse = await APIcall(str)
+  const aiResponse = await APIcall(str);
 
   output.textContent=aiResponse;
 
