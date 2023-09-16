@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Try App</title>
+  <title>Student try</title>
 </head>
 <body>
-  <h1>Student Try App</h1>
-  
+
+  <h1>Student try</h1>
+
   <label for="topic">Topic:</label>
   <input type="text" id="topic" name="topic">
 
   <label for="subject">Subject:</label>
   <select id="subject" name="subject">
-    <option value="math">Math</option>
-    <option value="science">Science</option> 
+    <option value="math">Math</option> 
+    <option value="science">Science</option>
     <option value="history">History</option>
   </select>
 
   <label for="difficulty">Difficulty:</label>
-  <select id="difficulty" name="difficulty">   
+  <select id="difficulty" name="difficulty">
     <option value="easy">Easy</option>
     <option value="medium">Medium</option>
     <option value="hard">Hard</option>
   </select>
+
+  <button type="button" id="submit">Submit</button>
+  
+  <div id="output"></div>
+
+  <script src="student-try.js"></script>
 
 </body>
 </html>
