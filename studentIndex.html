@@ -1,38 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Example</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Form Example</title>
+    <title>Beautiful Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }       
+        }
+
+        .form-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        select, input, button {
+            margin: 5px;
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div id="header">
-        <h1>MAMU</h1>
-    </div>
-    <div id="container">
-        <div class="box">BLAHH</div>
-        <div class="box">BLAHH</div>
-        <div class="box">
-            <input type="text" placeholder="Enter text"><br>
+    <div class="form-container">
+        <form>
+            <input type="text" placeholder="Enter text">
             <select>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <!-- Add more options here -->
-            </select><br>
-            <button>Submit</button>
-        </div>
-        <div class="box">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+            </select>
             <select>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <!-- Add more options here -->
-            </select><br>
-            <button>Submit</button>
-        </div>
-    </div>
-    <div id="output">
-        <!-- Output content will appear here -->
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+            <button type="submit">Submit</button>
+        <h2>Beautiful Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="words">Type in the words:</label>
+                <input type="text" id="words" name="words" placeholder="Enter words">
+            </div>
+            <div class="form-group">
+                <label for="dropdown1">Dropdown 1:</label>
+                <select id="dropdown1" name="dropdown1">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dropdown2">Dropdown 2:</label>
+                <select id="dropdown2" name="dropdown2">
+                    <option value="optionA">Option A</option>
+                    <option value="optionB">Option B</option>
+                    <option value="optionC">Option C</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
     </div>
 </body>
 </html>
+
