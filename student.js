@@ -1,22 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const submitBtn = document.getElementById('submit');
+  const output = document.getElementById('output');
+  const textinput = document.getElementById('Topic'); // Added textinput
 
-    const submitBtn = document.getElementById('submit');
-    const output = document.getElementById('output');
-    const textinput = document.getElementById('Topic'); // Added textinput
+  submitBtn.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
     
-    submitBtn.addEventListener('click', () => {
-      let outputText = '';
-      const Subject = document.getElementById('Subject'); // Added Subject
-      const Grade = document.getElementById('Grade'); // Added Grade
-      
-      outputText += `${Subject.value} - ${Grade.value}\n\n`; 
-      outputText += textinput.value;
-      
-      // Clear previous content and append new output in a box
-      output.innerHTML += `<div class="output-box">${outputText}</div>`;
-    });
-  
+    let outputText = '';
+    const Subject = document.getElementById('Subject'); // Added Subject
+    const Grade = document.getElementById('Grade'); // Added Grade
+
+    outputText += `${Subject.value} - ${Grade.value}\n\n`;
+    outputText += textinput.value;
+
+    // Clear previous content and append new output in a box
+    output.innerHTML = `<div class="output-box">${outputText}</div>`;
   });
+});
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 
