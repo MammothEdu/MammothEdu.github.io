@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     outputText += textinput.value;
 
     // Clear previous content and append new output in a box
-    output.innerHTML = `<div class="output-box">${outputText}</div>`;
+    output.innerHTML += `<div class="output-box">${outputText}</div>`;
   });
 });
 
