@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   submitBtn.addEventListener('click', () => {
     let outputText = '';
-    outputText += `${dropdown1.value} - ${dropdown2.value}\n\n`; 
+    outputText += `${Subject.value} - ${Grade.value}\n\n`; 
     outputText += textinput.value;
     
     // output.textContent += outputText;
