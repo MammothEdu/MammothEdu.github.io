@@ -36,6 +36,12 @@ textarea {
   padding: 20px;
   border-radius: 4px;
 }
+#code {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
 
 #topic {
   width: 100%;
