@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     outputText += `${dropdown1.value} - ${dropdown2.value}\n\n`; 
     outputText += textinput.value;
     
-    output.textContent += outputText;
+    // output.textContent += outputText;
+    output.innerHTML = `<div class="output-box">${outputText}</div>`; // Enclose in a box
   });
 
 });
