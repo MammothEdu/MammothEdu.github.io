@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary: #3b99fc;
   --secondary: #56ccf2;
 }
@@ -63,4 +63,73 @@ form {
   background-color: #f2f9ff;
   border-radius: 5px;
 }
+ */
 
+
+:root {
+  --primary: #3b99fc;
+  --secondary: #56ccf2; 
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px; 
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px; 
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s; 
+}
+
+button[type="submit"]:hover {
+  background: var(--secondary);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Form */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Output */  
+#output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f9ff;
+  border-radius: 5px;
+}
