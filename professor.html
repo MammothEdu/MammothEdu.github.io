@@ -1,70 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Professor App</title>
+<style>
+/* Resetting some default styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 0; /* Remove top padding for body */
+}
+
+/* Styling for the header */
+header {
+  background-color: #4CAF50;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 28px;
+  color: white;
+  width: 100%;
+  margin: 0; /* Remove margin for header */
+}
+
+/* Center the header text */
+header h1 {
+  margin: 0;
+}
+
+/* Styling for the form container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style labels and form elements */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styling for the submit button */
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the output container */
+#output-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the output box within the container */
+.output-box {
+  padding: 20px;
+  border: 1px solid #999;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Center-align text within the output box */
+.output-box p {
+  text-align: center;
+}
+
+</style>
 </head>
 <body>
 
-  <h1>Professor App</h1>
-  <link rel="stylesheet" href="professor-styles.css">
+<header>
+<h1 style="margin: 0;">Professor APP</h1> <!-- Remove margin for the header text -->
+</header></header>
 
-  <label for="topic">Topic:</label>
-  <input id="topic" name="topic"></input>
+<div class="container">
+  <form>
+    <label for="Topic">Text Input:</label>
+    <input type="text" id="Topic" name="Topic">
 
-  <label for="subject">Subject:</label>
-  <select id="subject" name="subject">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="math">Math</option>
-    <option value="science">Science</option>
-    <option value="history">History</option>
-    <option value="language">Language</option>
-  </select>
+    <label for="Subject">Subject:</label>
+    <select id="Subject" name="Subject">
+      <option value="Mathematics">Mathematics</option>
+      <option value="Science">Science</option>
+      <option value="History">History</option>
+      <option value="English">English</option>
+      <!-- Add more subjects here -->
+    </select>
 
-  <label for="difficulty">Difficulty:</label>
-  <select id="difficulty" name="difficulty">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="easy">Easy</option>
-    <option value="medium">Medium</option> 
-    <option value="hard">Hard</option>
-  </select>
+    <label for="Difficulty">Difficulty:</label>
+    <select id="Difficulty" name="Difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
 
-  <label for="grade">Grade:</label>
-  <select id="grade" name="grade">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="Grade 4">Grade 4</option>
-    <option value="Grade 5">Grade 5</option> 
-    <option value="Grade 6">Grade 6</option>
-    <option value="Grade 7">Grade 7</option>
-    <option value="Grade 8">Grade 8</option> 
-    <option value="Grade 9">Grade 9</option>
-    <option value="Grade 10">Grade 10</option>
-    <option value="Grade 11">Grade 11</option> 
-    <option value="Grade 12">Grade 12</option>
-  </select>
+    <label for="Grade">Grade:</label>
+    <select id="Grade" name="Grade">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <!-- Add more grade levels here -->
+    </select>
 
-  <label for="type">Output Type</label>
-  <select id="type" name="type">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="Assessment1">Assessment</option>
-    <option value="Explanation">Explanation</option> 
-    <option value="Lecture Notes">Lecture Notes</option>
-  </select>
+    <label for="OutputType">Output Type:</label>
+    <select id="OutputType" name="OutputType">
+      <option value="Explanation">Explanation</option>
+      <option value="LectureNotes">Lecture Notes</option>
+    </select>
 
-  <label for="length">Output Length</label>
-  <select id="length" name="length">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="50">50 words</option>
-    <option value="100">100 words</option> 
-    <option value="150">150 words</option>
-  </select>
+    <label for="OutputLength">Output Length:</label>
+    <select id="OutputLength" name="OutputLength">
+      <option value="50">50 words</option>
+      <option value="100">100 words</option>
+      <option value="150">150 words</option>
+    </select>
 
-  <button type="button" id="submit">Submit</button>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</div>
 
-  <label for="feedback">Response:</label>
-  <textarea id="feedback" name="feedback"></textarea>
+<!-- Add a separate output block -->
+<div id="output-container">
+  <div id="output">
+    <div class="output-box">
+<!--       <p>Sample Output Text</p> -->
+    </div>
+  </div>
+</div>
 
-  <script src="professor.js"></script>
+<script src="professor.js"></script>
 
 </body>
 </html>
-
