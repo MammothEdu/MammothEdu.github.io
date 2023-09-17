@@ -1,4 +1,4 @@
-
+<!-- 
 
 <!DOCTYPE html>
 <html>
@@ -113,3 +113,133 @@ input[type="submit"]:hover {
 </html>
 
 
+ -->
+
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add some margin to lower the selection box */
+select {
+  margin-top: 10px;
+}
+
+/* Styling for the output block */
+#output {
+  max-width: 500px;
+  margin: 20px auto; /* Add margin to separate from the form */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <label for="Topic">Text Input:</label>
+  <input type="text" id="Topic" name="Topic">
+
+  <label for="Subject">Subject:</label>
+  <select id="Subject" name="Subject">
+    <option value="Mathematics">Mathematics</option>
+    <option value="Science">Science</option>
+    <option value="Mathematics">Mathematics</option>
+    <option value="Science">Science</option>
+    <option value="History">History</option>
+    <option value="English">English</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Biology">Biology</option>
+    <option value="Geography">Geography</option>
+    <option value="Economics">Economics</option>
+    <option value="Psychology">Psychology</option>
+    <option value="Sociology">Sociology</option>
+    <option value="Art">Art</option>
+    <option value="Music">Music</option>
+    <option value="Physical Education">Physical Education</option>
+    <option value="Philosophy">Philosophy</option>
+    <option value="Literature">Literature</option>
+    <option value="Political Science">Political Science</option>
+    <option value="Environmental Science">Environmental Science</option>
+    <option value="Astronomy">Astronomy</option>
+    <option value="Linguistics">Linguistics</option>
+    <option value="Anthropology">Anthropology</option>
+    <option value="Business Administration">Business Administration</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Medicine">Medicine</option>
+    <option value="Law">Law</option>
+    <option value="Education">Education</option>
+    <option value="Sociology">Sociology</option>
+    <option value="Communication Studies">Communication Studies</option>
+    <option value="Architecture">Architecture</option>
+  </select>
+
+  <label for="Grade">Grade:</label>
+  <select id="Grade" name="Grade">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+
+  <button type="button" id="Submit">Submit</button>
+</form>
+
+<!-- Add a separate output block -->
+<div id="output"></div>
+
+<!-- Your JavaScript script source goes here -->
+<script src="student.js"></script>
+
+</body>
+</html>
