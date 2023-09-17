@@ -1,6 +1,6 @@
 :root {
   --primary: #3b99fc;
-  --secondary: #56ccf2;
+  --secondary: #56ccf2; 
 }
 
 fieldset {
@@ -10,31 +10,38 @@ fieldset {
 
 legend {
   font-size: 1.25rem;
-  font-weight: 600;  
+  font-weight: 600;
 }
 
 select {
-  appearance: none;
+  appearance: none; 
   /* hide default arrow */
 }
 
 /* Custom arrow */
 select::after {
   content: '\25BC';
-  position: absolute;  
+  position: absolute;
   /* ...styles */
 }
 
 input[type="text"]:hover,
 select:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
-input[type="submit"] {
-  transition: transform 0.2s; 
+button[type="button"] {
+  background: var(--primary);
+  transition: transform 0.2s;
 }
 
-input[type="submit"]:hover {
+button[type="button"]:hover {
   transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} 
+
+button[type="button"]:active {
+  background: var(--secondary);
+  transform: scale(1);
 }
