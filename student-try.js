@@ -8,7 +8,7 @@ async function APIcall(prompt){
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${"".join(key)}`
+    'Authorization': `Bearer ${key.join('')}`
   },
   body: JSON.stringify({
     model: 'gpt-3.5-turbo',
@@ -29,9 +29,9 @@ submitBtn.addEventListener('click', async () => {
   const subject = document.getElementById('subject').value;
   const grade = document.getElementById('grade').value;
   
-  const str = `Explain ${topic} to a ${grade} student; the subject is ${subject}`;
+  var prompt = `Explain ${topic} to a ${grade} student; the subject is ${subject}`;
   
-  const aiResponse = await APIcall(str);
+  var aiResponse = await APIcall(prompt);
 
   output.textContent=aiResponse;
 
