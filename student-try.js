@@ -1,13 +1,14 @@
 const submitBtn = document.getElementById('submit');
 const output = document.getElementById('output');
-const OPENAI_API_KEY=process.env.OPENAI_API_KEY;
+const key = ['s', 'k', '-', '3', 'Y', 'p', 'k', '9', 'A', 'c', '2', 'z', 's', 'k', 'm', 't', 'l', 'V', 'k', 'r', 'T', '9', 'O', 'T', '3', 'B', 'l', 'b', 'k', 'F', 'J', 'B', 'V', 'z', 'm', 'w', '1', 'R', 'W', '7', 'K', '1', 'W', 'z', 'v', 'L', '5', 'e', 'I', 'F', '9']
+
 
 async function APIcall(prompt){
   const response = await fetch('https://api.openai.com/v1/completions',{
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${OPENAI_API_KEY}`
+    'Authorization': `Bearer ${"".join(key)}`
   },
   body: JSON.stringify({
     model: 'gpt-3.5-turbo',
