@@ -38,4 +38,29 @@ button[type="button"] {
 
 button[type="button"]:hover {
   background: var(--secondary);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f9ff;
+  border-radius: 5px;
+}
+
