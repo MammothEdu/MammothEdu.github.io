@@ -34,9 +34,7 @@ submitBtn.addEventListener('click', async () => {
   var flag=0;
   const topic = document.getElementById('topic').value;
   const subject = document.getElementById('subject').value;
-  const difficulty = document.getElementById('difficulty').value;
   const grade = document.getElementById('grade').value;
-  const type = document.getElementById('type').value;
   const length = document.getElementById('length').value;
 
   var feedBackMessage="";
@@ -48,16 +46,8 @@ submitBtn.addEventListener('click', async () => {
     feedBackMessage+="Make sure to set a subject! \n";
     flag=1;
   }
-  if(difficulty=="Choose"){
-    feedBackMessage+="Make sure to set a difficulty! \n";
-    flag=1;
-  }
   if(grade=="Choose"){
     feedBackMessage+="Make sure to set a grade! \n";
-    flag=1;
-  }
-  if(type=="Choose"){
-    feedBackMessage+="Make sure to set an output type! \n";
     flag=1;
   }
   if(length=="Choose"){
@@ -72,7 +62,7 @@ submitBtn.addEventListener('click', async () => {
     return;
   }
 
-  var prompt = `The topic is ${topic}; the audience is ${grade} students; the field is ${subject}; create a ${type} using ${length} words`;
+  var prompt = `Given: The topic is ${topic}; the audience is ${grade} students; the subject field is ${subject}; explain the the ${topic} using ${length} words. Importantly, make sure that you don't solve the explicit math problems or "write an essay" type of ${topic}'s, if this happens, return some hints to help them after saying: "I cannot solve a direct math question for you, but here are some hints"`;
   
   var aiResponse = await APIcall(prompt,length);
   console.log(aiResponse);
