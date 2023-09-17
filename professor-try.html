@@ -4,6 +4,107 @@
   <title>Professor App</title>
 </head>
 <body>
+  <style>
+    /* Resetting some default styles */
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding-top: 0; /* Remove top padding for body */
+    }
+    
+    /* Styling for the header */
+    header {
+      background-color: #4CAF50;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 28px;
+      color: white;
+      width: 100%;
+      margin: 0; /* Remove margin for header */
+    }
+    
+    /* Center the header text */
+    header h1 {
+      margin: 0;
+    }
+    
+    /* Styling for the form container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Style labels and form elements */
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    /* Styling for the submit button */
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Styling for the output container */
+    #output-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Styling for the output box within the container */
+    .output-box {
+      padding: 20px;
+      border: 1px solid #999;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    
+    /* Center-align text within the output box */
+    .output-box p {
+      text-align: center;
+    }
+    
+    </style>
 
   <h1>Professor App</h1>
   <link rel="stylesheet" href="professor-try-styles.css">
@@ -63,6 +164,16 @@
 
   <label for="feedback">Response:</label>
   <textarea id="feedback" name="feedback"></textarea>
+  
+  <label for="showTextbox">Send response as Email:</label>
+  <input type="checkbox" id="showTextbox" >
+  <div id="textbox-container" style="display:none">
+    <label for="textbox">Target Emails:</label>
+    <input type="text" id="receiver"></br></br>
+    <a id="emailButton" href="mailto:your-email@example.com?subject=Feedback">Send Feedback as Email</a>
+  </div>
+
+  
 
   <script src="professor-try.js"></script>
 

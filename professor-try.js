@@ -2,6 +2,35 @@ const submitBtn = document.getElementById('submit');
 const output = document.getElementById('output');
 const feedback = document.getElementById('feedback');
 const key = ['s', 'k', '-', '3', 'Y', 'p', 'k', '9', 'A', 'c', '2', 'z', 's', 'k', 'm', 't', 'l', 'V', 'k', 'r', 'T', '9', 'O', 'T', '3', 'B', 'l', 'b', 'k', 'F', 'J', 'B', 'V', 'z', 'm', 'w', '1', 'R', 'W', '7', 'K', '1', 'W', 'z', 'v', 'L', '5', 'e', 'I', 'F', '9'];
+const emailButton = document.getElementById("emailButton");
+
+
+emailButton.addEventListener("click", function () {
+  
+  const feedbackText = document.getElementById("feedback").value;
+
+  const recipientEmail = document.getElementById
+  
+  // Create a subject for the email.
+  const subject = "Response from Professor App";
+
+  // Create the mailto link with the recipient email, subject, and feedback text.
+  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(feedbackText)}`;
+  
+  // Set the href attribute of the email button to the mailto link.
+  emailButton.setAttribute("href", mailtoLink);
+});
+
+const checkbox = document.getElementById("showTextbox");
+const textboxContainer = document.getElementById("textbox-container");
+
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked) {
+    textboxContainer.style.display = "block";
+  } else {
+    textboxContainer.style.display = "none";
+  }
+});
 
 
 async function APIcall(message,messageLength){
@@ -74,7 +103,7 @@ submitBtn.addEventListener('click', async () => {
 
   var prompt = `The topic is ${topic}; the audience is ${grade} students; the field is ${subject}; create a ${type} using ${length} words`;
   
-  var aiResponse = await APIcall(prompt,length);
+  const aiResponse = await APIcall(prompt,length);
   console.log(aiResponse);
   feedback.textContent=aiResponse;
 
