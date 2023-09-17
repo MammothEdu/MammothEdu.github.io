@@ -1,38 +1,5 @@
-/* Styles */ 
-
-.container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-}
-
-button, select, input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 4px;
-  outline: none;
-} 
-
-button {
-  background: #56ccf2;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #2d9cdb;
-}
-
-#output {
-  margin-top: 20px;
-  padding: 20px;
-  background: #f2f2f2;
-  border-radius: 4px;
-}
-/* :root {
+/* 
+:root {
   --primary: #3b99fc;
   --secondary: #56ccf2;
 }
@@ -98,8 +65,8 @@ form {
   border-radius: 5px;
 }
  */
-/* 
-
+/* /* 
+ */
 :root {
   --primary: #3b99fc;
   --secondary: #56ccf2; 
@@ -144,8 +111,8 @@ button[type="submit"]:hover {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Container */
-/* .container {
+
+ .container {
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
@@ -153,18 +120,18 @@ button[type="submit"]:hover {
   border-radius: 5px;
 }
 
-/* Form */
-/* form {
+
+form {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
 }
- */
-/* Output */  
-/* #output {
+
+
+ #output {
   margin-top: 20px;
   padding: 20px;
   background-color: #f2f9ff;
   border-radius: 5px;
-} */
+}
  
