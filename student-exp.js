@@ -70,3 +70,68 @@ submitBtn.addEventListener('click', async () => {
 
 });
 
+// For the Coding/Error Explaining Part of the application
+const submitBtn1 = document.getElementById('submit1');
+const output1 = document.getElementById('output1');
+const feedback1 = document.getElementById('feedback1');
+const key1 = ['s', 'k', '-', '3', 'Y', 'p', 'k', '9', 'A', 'c', '2', 'z', 's', 'k', 'm', 't', 'l', 'V', 'k', 'r', 'T', '9', 'O', 'T', '3', 'B', 'l', 'b', 'k', 'F', 'J', 'B', 'V', 'z', 'm', 'w', '1', 'R', 'W', '7', 'K', '1', 'W', 'z', 'v', 'L', '5', 'e', 'I', 'F', '9'];
+
+
+async function APIcall1(message,messageLength){
+// Make the API call
+const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  method: 'POST', // You need to specify the HTTP method as 'POST' for this request
+  headers: {
+    'Authorization': `Bearer ${key.join('')}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    messages: [
+      {
+        role: 'user',
+        content: message
+      } 
+    ],
+    model: "gpt-3.5-turbo",
+    max_tokens: parseInt(messageLength)*3, // Adjust the max_tokens as needed
+    temperature: 0.7, // Adjust the temperature for creativity (0.2 to 1.0)
+  })
+});
+  console.log(response)
+  var output = await response.json(); // Extract the response text
+  console.log(output.choices[0].message.content); // Output the response
+  return output.choices[0].message.content
+}
+
+submitBtn1.addEventListener('click', async () => {
+  var flag=0;
+  const code = document.getElementById('code').value;
+  const length = document.getElementById('length1').value;
+
+  var feedBackMessage="";
+  if(code==""){
+    feedBackMessage+="Make sure to provide code/error! \n";
+    flag=1;
+  }
+  if(length=="Choose"){
+    feedBackMessage+="Make sure to set a length! \n";
+    flag=1;
+  }
+
+  feedback1.textContent=feedBackMessage;
+
+  if(flag==1){
+    console.log("FLAG TRIGGERED");
+    return;
+  }
+
+  var prompt = `Given: The code is ${code}; if it is code/error, explain it and provide some debugging hints using ${length} words. Importantly, make sure that you don't explicitly edit or provide code. Don't answer "write code" type of prompts, if this happens, return some hints to help them after saying: "I cannot directly write code for you, but here are some hints"`;
+  
+  var aiResponse = await APIcall1(prompt,length);
+  console.log(aiResponse);
+  feedback1.textContent=aiResponse;
+
+});
+
+
+
