@@ -18,6 +18,15 @@ label, select, textarea, button {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 4px;
+  background: #fff;
+}
+
 select, button {
   height: 40px;
   font-size: 16px;

@@ -789,11 +789,6 @@ video {
   background-color: rgb(73 113 182 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-darkpurple:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(67 47 71 / var(--tw-bg-opacity));
-}
-
 @media (min-width: 768px) {
   .md\:w-1\/3 {
     width: 33.333333%;

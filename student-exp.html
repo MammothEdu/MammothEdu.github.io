@@ -7,65 +7,72 @@
 
   <h1>Student Experience</h1>
   <link rel="stylesheet" href="student-exp-styles.css">
+  <nav class="relative container mx-auto p-6">
+		<div class="flex items-center">
+			<!--logo?-->
+			<div class="pt-2">
+				<img src="images/logo.png" width="170px" height="auto" alt="">
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <label for="topic">Topic to be Explained:</label>
+    <input id="topic" name="topic"></input>
+
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject">
+      <option value="Choose" selected disabled hidden>Select an option</option>
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="language">Language</option>
+    </select>
+
+    <label for="grade">Grade:</label>
+    <select id="grade" name="grade">
+      <option value="Choose" selected disabled hidden>Select an option</option>
+      <option value="Grade 4">Grade 4</option>
+      <option value="Grade 5">Grade 5</option> 
+      <option value="Grade 6">Grade 6</option>
+      <option value="Grade 7">Grade 7</option>
+      <option value="Grade 8">Grade 8</option> 
+      <option value="Grade 9">Grade 9</option>
+      <option value="Grade 10">Grade 10</option>
+      <option value="Grade 11">Grade 11</option> 
+      <option value="Grade 12">Grade 12</option>
+    </select>
+
+    <label for="length">Output Length</label>
+    <select id="length" name="length">
+      <option value="Choose" selected disabled hidden>Select an option</option>
+      <option value="50">50 words</option>
+      <option value="100">100 words</option> 
+      <option value="150">150 words</option>
+    </select>
+
+    <button type="button" id="submit">Submit</button>
+
+    <label for="feedback">Response:</label>
+    <textarea id="feedback" name="feedback"></textarea>
 
 
-  <label for="topic">Topic to be Explained:</label>
-  <input id="topic" name="topic"></input>
+    <label for="code">Code/Error Message to be Explained:</label>
+    <input id="code" name="code"></input>
 
-  <label for="subject">Subject:</label>
-  <select id="subject" name="subject">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="math">Math</option>
-    <option value="science">Science</option>
-    <option value="history">History</option>
-    <option value="language">Language</option>
-  </select>
+    <label for="length1">Output Length</label>
+    <select id="length1" name="length1">
+      <option value="Choose" selected disabled hidden>Select an option</option>
+      <option value="50">50 words</option>
+      <option value="100">100 words</option> 
+      <option value="150">150 words</option>
+    </select>
 
-  <label for="grade">Grade:</label>
-  <select id="grade" name="grade">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="Grade 4">Grade 4</option>
-    <option value="Grade 5">Grade 5</option> 
-    <option value="Grade 6">Grade 6</option>
-    <option value="Grade 7">Grade 7</option>
-    <option value="Grade 8">Grade 8</option> 
-    <option value="Grade 9">Grade 9</option>
-    <option value="Grade 10">Grade 10</option>
-    <option value="Grade 11">Grade 11</option> 
-    <option value="Grade 12">Grade 12</option>
-  </select>
+    <button type="button" id="submit1">Submit</button>
 
-  <label for="length">Output Length</label>
-  <select id="length" name="length">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="50">50 words</option>
-    <option value="100">100 words</option> 
-    <option value="150">150 words</option>
-  </select>
-
-  <button type="button" id="submit">Submit</button>
-
-  <label for="feedback">Response:</label>
-  <textarea id="feedback" name="feedback"></textarea>
-
-
-  <label for="code">Code/Error Message to be Explained:</label>
-  <input id="code" name="code"></input>
-
-  <label for="length1">Output Length</label>
-  <select id="length1" name="length1">
-    <option value="Choose" selected disabled hidden>Select an option</option>
-    <option value="50">50 words</option>
-    <option value="100">100 words</option> 
-    <option value="150">150 words</option>
-  </select>
-
-  <button type="button" id="submit1">Submit</button>
-
-  <label for="feedback1">Response:</label>
-  <textarea id="feedback1" name="feedback1"></textarea>
-  
-  <script src="student-exp.js"></script>
-
+    <label for="feedback1">Response:</label>
+    <textarea id="feedback1" name="feedback1"></textarea>
+    
+    <script src="student-exp.js"></script>
+  </div>
 </body>
 </html>
