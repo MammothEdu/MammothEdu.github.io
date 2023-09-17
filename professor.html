@@ -1,59 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professor app for generating questions">
-
   <title>Professor App</title>
 </head>
-
 <body>
 
-  <header>
-    <h1>Professor App</h1>
-  </header>
+  <h1>Professor App</h1>
+  <link rel="stylesheet" href="professor-styles.css">
 
-  <main>
+  <label for="topic">Topic:</label>
+  <input id="topic" name="topic"></input>
 
-    <fieldset>
-      <legend>Question Details</legend>
+  <label for="subject">Subject:</label>
+  <select id="subject" name="subject">
+    <option value="Choose" selected disabled hidden>Select an option</option>
+    <option value="math">Math</option>
+    <option value="science">Science</option>
+    <option value="history">History</option>
+    <option value="language">Language</option>
+  </select>
 
-      <div>
-        <label for="subject">Subject:</label>
-        <select id="subject" name="subject">
-          <option value="math">Math</option>
-          <option value="science">Science</option>
-          <option value="history">History</option>
-        </select>
-      </div>
+  <label for="difficulty">Difficulty:</label>
+  <select id="difficulty" name="difficulty">
+    <option value="Choose" selected disabled hidden>Select an option</option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option> 
+    <option value="hard">Hard</option>
+  </select>
 
-      <div>
-        <label for="difficulty">Difficulty:</label>
-        <select id="difficulty" name="difficulty">
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-      </div>
+  <label for="grade">Grade:</label>
+  <select id="grade" name="grade">
+    <option value="Choose" selected disabled hidden>Select an option</option>
+    <option value="Grade 4">Grade 4</option>
+    <option value="Grade 5">Grade 5</option> 
+    <option value="Grade 6">Grade 6</option>
+    <option value="Grade 7">Grade 7</option>
+    <option value="Grade 8">Grade 8</option> 
+    <option value="Grade 9">Grade 9</option>
+    <option value="Grade 10">Grade 10</option>
+    <option value="Grade 11">Grade 11</option> 
+    <option value="Grade 12">Grade 12</option>
+  </select>
 
-      <div>
-        <label for="question">Question:</label>
-        <textarea id="question" name="question"></textarea>
-      </div>
+  <label for="type">Output Type</label>
+  <select id="type" name="type">
+    <option value="Choose" selected disabled hidden>Select an option</option>
+    <option value="Assessment1">Assessment</option>
+    <option value="Explanation">Explanation</option> 
+    <option value="Lecture Notes">Lecture Notes</option>
+  </select>
 
-      <button type="submit">Submit</button>
+  <label for="length">Output Length</label>
+  <select id="length" name="length">
+    <option value="Choose" selected disabled hidden>Select an option</option>
+    <option value="50">50 words</option>
+    <option value="100">100 words</option> 
+    <option value="150">150 words</option>
+  </select>
 
-    </fieldset>
+  <button type="button" id="submit">Submit</button>
 
-    <div id="output" role="alert" aria-live="assertive"></div>
+  <label for="feedback">Response:</label>
+  <textarea id="feedback" name="feedback"></textarea>
 
-  </main>
-  
-  <footer>
-    <script src="professor-app.js"></script>
-  </footer>
+  <script src="professor.js"></script>
 
 </body>
 </html>
+
