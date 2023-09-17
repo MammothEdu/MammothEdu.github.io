@@ -115,10 +115,27 @@ input[type="submit"]:hover {
 
  -->
 
-<!DOCTYPE html>
+is this irght:<!DOCTYPE html>
 <html>
 <head>
 <style>
+/* Resetting some default styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #BCD4E6;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Styling for the header */
+header {
+  background-color: #4CAF50;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  color: white;
+}
+
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -139,17 +156,21 @@ input[type="text"], select {
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 40px;
+  font-size: 16px;
 }
 
+/* Styling for the submit button */
 input[type="submit"] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
+  padding: 16px 20px; /* Slightly larger and centered */
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 18px; /* Larger text size */
 }
 
 input[type="submit"]:hover {
@@ -161,24 +182,39 @@ select {
   margin-top: 10px;
 }
 
-/* Styling for the output block */
-#output {
+/* Styling for the output container */
+#output-container {
+  width: 100%;
   max-width: 500px;
-  margin: 20px auto; /* Add margin to separate from the form */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  overflow-wrap: break-word;
   word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 20px;
+  height: 200%; /* Twice the height of the form */
+}
+
+/* Styling for the output box within the container */
+.output-box {
+  padding: 10px;
+  border: 1px solid #999;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 </style>
 </head>
 <body>
 
+<header>Student APP</header>
+
 <form>
   <label for="Topic">Text Input:</label>
   <input type="text" id="Topic" name="Topic">
 
-  <label for="Subject">Subject:</label>
+<label for="Subject">Subject:</label>
   <select id="Subject" name="Subject">
     <option value="Mathematics">Mathematics</option>
     <option value="Science">Science</option>
@@ -234,10 +270,14 @@ select {
 </form>
 
 <!-- Add a separate output block -->
-<div id="output"></div>
+<div id="output-container">
+  <div id="output"></div>
+</div>
 
 <!-- Your JavaScript script source goes here -->
 <script src="student.js"></script>
 
 </body>
 </html>
+
+
