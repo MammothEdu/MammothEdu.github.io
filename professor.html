@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professor app for generating questions">
+
+  <title>Professor App</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Professor App</h1>
+  </header>
+
+  <main>
+
+    <fieldset>
+      <legend>Question Details</legend>
+
+      <div>
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+          <option value="math">Math</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="question">Question:</label>
+        <textarea id="question" name="question"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+
+    </fieldset>
+
+    <div id="output" role="alert" aria-live="assertive"></div>
+
+  </main>
+  
+  <footer>
+    <script src="professor-app.js"></script>
+  </footer>
+
+</body>
+</html>
