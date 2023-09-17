@@ -1,4 +1,4 @@
-/* professor-try-styles.css */
+/* professor-styles.css */
 
 body {
   font-family: Arial, sans-serif;
@@ -35,4 +35,10 @@ textarea {
   background: #fff;
   padding: 20px;
   border-radius: 4px;
+}
+
+#topic {
+  width: 100%;
+  min-width: 300px; /* Adjust this value as needed for your desired base width */
+  box-sizing: border-box; /* Ensures the padding and border are included in the width */
 }
