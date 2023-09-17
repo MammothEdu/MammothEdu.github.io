@@ -1,47 +1,41 @@
 :root {
   --primary: #3b99fc;
-  --secondary: #56ccf2; 
+  --secondary: #56ccf2;
 }
 
-fieldset {
-  border: none;
-  padding: 0;
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-legend {
-  font-size: 1.25rem;
-  font-weight: 600;
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
+input[type="text"],
 select {
-  appearance: none; 
-  /* hide default arrow */
-}
-
-/* Custom arrow */
-select::after {
-  content: '\25BC';
-  position: absolute;
-  /* ...styles */
-}
-
-input[type="text"]:hover,
-select:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
 }
 
 button[type="button"] {
+  padding: 12px 15px; 
+  width: 100%;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
   background: var(--primary);
-  transition: transform 0.2s;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 button[type="button"]:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-} 
-
-button[type="button"]:active {
   background: var(--secondary);
-  transform: scale(1);
 }
