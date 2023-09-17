@@ -1,6 +1,6 @@
 const submitBtn = document.getElementById('submit');
 const output = document.getElementById('output');
-const key = ['s', 'k', '-', '3', 'Y', 'p', 'k', '9', 'A', 'c', '2', 'z', 's', 'k', 'm', 't', 'l', 'V', 'k', 'r', 'T', '9', 'O', 'T', '3', 'B', 'l', 'b', 'k', 'F', 'J', 'B', 'V', 'z', 'm', 'w', '1', 'R', 'W', '7', 'K', '1', 'W', 'z', 'v', 'L', '5', 'e', 'I', 'F', '9']
+const key = ['s', 'k', '-', '3', 'Y', 'p', 'k', '9', 'A', 'c', '2', 'z', 's', 'k', 'm', 't', 'l', 'V', 'k', 'r', 'T', '9', 'O', 'T', '3', 'B', 'l', 'b', 'k', 'F', 'J', 'B', 'V', 'z', 'm', 'w', '1', 'R', 'W', '7', 'K', '1', 'W', 'z', 'v', 'L', '5', 'e', 'I', 'F', '9'];
 
 
 async function APIcall(prompt){
